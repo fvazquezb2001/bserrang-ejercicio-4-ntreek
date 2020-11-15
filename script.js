@@ -4,11 +4,11 @@ const changeBackgroundButton = document.getElementById(
   "changeBackgroundButton"
 );
 
-changeBackgroundButton.addEventListener("click", function() {
+changeBackgroundButton.addEventListener("click",() => {
   this.style.backgroundColor = getRandomColor();
 });
 
-function getRandomColor() {
+getRandomColor = () => {
   const letters = getLetters();
   let color = '#';
   for (var i = 0; i < 6; i++) {
@@ -16,7 +16,6 @@ function getRandomColor() {
   }
   return color;
 }
-
-function getLetters(){
+ getLetters = () =>{
   return '0123456789ABCDEF';
 }
